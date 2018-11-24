@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "cypress:version": "cypress version",
+    "cypress:verify": "cypress verify",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:record": "cypress run --record",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:run:headed": "cypress run --headed"
+  },
+  "devDependencies": {
+    "cypress": "^3.1.2",
+    "npm-run-all": "4.1.3"
+  }
+}
