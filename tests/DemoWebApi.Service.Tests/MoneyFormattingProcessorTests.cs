@@ -15,7 +15,7 @@ namespace DemoWebApi.Service.Tests
 
         [Theory]
         [InlineData(0, "0.00")]
-        [InlineData(-0, "0.00")]
+        [InlineData(-0.0, "0.00")]
         [InlineData(10000, "10 000.00")]
         [InlineData(-10000, "-10 000.00")]
         [InlineData(123567.567, "123 567.57")]
@@ -24,6 +24,7 @@ namespace DemoWebApi.Service.Tests
         [InlineData(-1.0, "-1.00")]
         [InlineData(12345678901, "12 345 678 901.00")]
         [InlineData(-12345678901.9, "-12 345 678 901.90")]
+        [InlineData(999.999, "1 000.00")]
         public void TestFormatMoney(decimal input, string output)
         {
             Assert.Equal(output, _moneyFormatting.FormatMoney(input));
